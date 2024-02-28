@@ -7,16 +7,16 @@ import ProductsListItem from './ProductsListItem'
  */
 
 function ProductsList ({ products }) {
-    if (!products || products.length < 1) return 'No data'
-    reutrn (
-        products.map(product => {
-            <ProductsListItem key={product.id} product={product} />
-        })
-    )
+  if (!products || products.length < 1) return 'No data'
+  return (
+    products.map(product => (
+      <ProductsListItem key={product.id} product={product} />
+    ))
+  )
 }
 
 ProductsList.propTypes = {
-    products : PropTypes.arrayOf(PropTypes.object)
+  products: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default ProductsList
